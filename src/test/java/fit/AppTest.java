@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -48,7 +49,7 @@ public class AppTest {
     @Test
     public void shouldValidateSpendRepositoryListBehavior() {
         // arrange
-        var spendRepository = new SpendRepository();
+        var spendRepository = new SpendRepository(new ArrayList<>());
 
         var spendNameExpected = "Despesa inicial";
         var spendDateExpected = Calendar.getInstance();

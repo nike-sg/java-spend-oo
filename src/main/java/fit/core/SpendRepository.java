@@ -10,6 +10,10 @@ public class SpendRepository {
         this.all = new ArrayList<Spend>();
     }
 
+    public SpendRepository(List<Spend> repoSource) {
+        this.all = repoSource;
+    }
+
     public boolean add(Spend spend) {
         return all.add(spend);
     }
